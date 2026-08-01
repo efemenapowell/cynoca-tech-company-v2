@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog &amp; Community — CYNOCA</title>
+    <meta
+      name="description"
+      content="Insights, build notes, and community discussions from the CYNOCA team."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+  </head>
+  <body>
+    <!-- Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
+
+    <!-- Noise Overlay -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <!-- Page Transition -->
+    <div class="page-transition"></div>
+
+    <!-- ══ NAV ══════════════════════════════════════════════ -->
+    <header class="nav scrolled" id="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="brand">
+          <img src="images/logo.jpeg" alt="CYNOCA logo" class="brand-logo" />
+          <span class="brand-text">CYNOCA</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+          <a href="index.html">
+            <svg
+              class="nav-ic"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="M3 11l9-7 9 7" />
+              <path d="M5 10v10h14V10" />
+            </svg>
+            Home
+          </a>
+          <a href="index.html#services">
+            <svg
+              class="nav-ic"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-4z" />
+            </svg>
+            Services
+          </a>
+          <a href="index.html#work">
+            <svg
+              class="nav-ic"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="M4 4h16v12H4z" />
+              <path d="M8 20h8M12 16v4" />
+            </svg>
+            Work
+          </a>
+          <a href="blog.html" class="active">
+            <svg
+              class="nav-ic"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path
+                d="M4 19.5V6a2 2 0 012-2h11l3 3v12.5a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 014 19.5z"
+              />
+              <path d="M8 9h8M8 13h8M8 17h5" />
+            </svg>
+            Blog
+          </a>
+          <a href="about.html">
+            <svg
+              class="nav-ic"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <circle cx="12" cy="8" r="3.2" />
+              <path d="M4.5 20c1.6-4 4.6-6 7.5-6s5.9 2 7.5 6" />
+            </svg>
+            About
+          </a>
+          <a href="index.html#contact">
+            <svg
+              class="nav-ic"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="M4 4h16v16H4z" />
+              <path d="M4 6l8 7 8-7" />
+            </svg>
+            Contact
+          </a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="index.html#contact" class="btn btn-primary btn-sm"
+            >Start a Project</a
+          >
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ══ BLOG HERO ══════════════════════════════════════════ -->
+    <section class="blog-hero page-wrap">
+      <div class="page-hero-bg" aria-hidden="true">
+        <div class="hero-3d-scene">
+          <div class="hero-3d-orb hero-3d-orb-a"></div>
+          <div class="hero-3d-orb hero-3d-orb-b"></div>
+          <div class="hero-3d-ring"></div>
+          <div class="hero-3d-grid"></div>
+        </div>
+      </div>
+      <div class="section-inner">
+        <p class="eyebrow center anim-fade-in-up">
+          <span class="eyebrow-dot"></span>From the company
+        </p>
+        <h1 class="anim-fade-in-up delay-100">
+          Notes, insights &amp;<br /><span class="text-gradient"
+            >community</span
+          >
+        </h1>
+        <p class="anim-fade-in-up delay-200">
+          Build notes, engineering deep-dives, and community discussions from
+          the Cynoca team and the founders we work with.
+        </p>
+
+        <!-- Search Bar -->
+        <div class="anim-fade-in-up delay-300 blog-search-shell">
+          <input
+            type="search"
+            class="blog-search-input"
+            placeholder="Search articles, topics, authors…"
+          />
+          <svg
+            style="
+              position: absolute;
+              left: 18px;
+              top: 50%;
+              transform: translateY(-50%);
+              color: var(--text-faint);
+            "
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <circle cx="11" cy="11" r="7" />
+            <path d="M21 21l-4.35-4.35" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CATEGORIES ═════════════════════════════════════════ -->
+    <div class="section-inner">
+      <div class="blog-categories anim-fade-in-up delay-400">
+        <button class="cat-btn active" data-cat="all">All Posts</button>
+        <button class="cat-btn" data-cat="engineering">Engineering</button>
+        <button class="cat-btn" data-cat="design">Design</button>
+        <button class="cat-btn" data-cat="security">Security</button>
+        <button class="cat-btn" data-cat="product">Product</button>
+        <button class="cat-btn" data-cat="cloud">Cloud</button>
+        <button class="cat-btn" data-cat="community">Community</button>
+      </div>
+    </div>
+
+    <!-- ══ FEATURED POSTS ═════════════════════════════════════ -->
+    <section class="section-sm">
+      <div class="section-inner">
+        <div class="blog-featured reveal">
+          <!-- Main featured -->
+          <article class="blog-featured-card">
+            <div class="blog-featured-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1000&q=70"
+                alt="Designing interfaces that hold up past the demo"
+                loading="lazy"
+              />
+            </div>
+            <div class="blog-featured-body">
+              <div
+                style="
+                  display: flex;
+                  gap: 10px;
+                  align-items: center;
+                  margin-bottom: 12px;
+                "
+              >
+                <span class="badge badge-blue">Product Strategy</span>
+                <span class="badge badge-gray">Featured</span>
+              </div>
+              <h2>
+                <a href="#" style="color: inherit"
+                  >Designing interfaces that hold up past the demo</a
+                >
+              </h2>
+              <p>
+                Why the second week of using a product matters more than the
+                first five minutes — and what that means for how we design,
+                test, and ship.
+              </p>
+              <div class="blog-featured-meta">
+                <div
+                  style="
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 50%;
+                    background: var(--grad-brand);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 11px;
+                    font-weight: 700;
+                    color: #fff;
+                  "
+                >
+                  VT
+                </div>
+                <span>Cynoca Team</span>
+                <span class="dot"></span>
+                <span>Jul 24, 2026</span>
+                <span class="dot"></span>
+                <span>8 min read</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Side cards -->
+          <div class="blog-side-cards">
+            <article class="blog-side-card">
+              <div class="blog-side-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=300&q=70"
+                  alt="Security checklist"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-side-body">
+                <span class="badge badge-purple" style="margin-bottom: 8px"
+                  >Security</span
+                >
+                <h3>
+                  <a href="#" style="color: inherit"
+                    >Five checks every launch needs before go-live</a
+                  >
+                </h3>
+                <div class="blog-featured-meta" style="margin-top: 8px">
+                  <span>Jul 18, 2026</span><span class="dot"></span
+                  ><span>5 min read</span>
+                </div>
+              </div>
+            </article>
+            <article class="blog-side-card">
+              <div class="blog-side-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=70"
+                  alt="Cloud scaling"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-side-body">
+                <span class="badge badge-green" style="margin-bottom: 8px"
+                  >Cloud</span
+                >
+                <h3>
+                  <a href="#" style="color: inherit"
+                    >What "scalable" actually costs at series A</a
+                  >
+                </h3>
+                <div class="blog-featured-meta" style="margin-top: 8px">
+                  <span>Jul 09, 2026</span><span class="dot"></span
+                  ><span>6 min read</span>
+                </div>
+              </div>
+            </article>
+            <article class="blog-side-card">
+              <div class="blog-side-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=300&q=70"
+                  alt="AI tooling"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-side-body">
+                <span class="badge badge-amber" style="margin-bottom: 8px"
+                  >Engineering</span
+                >
+                <h3>
+                  <a href="#" style="color: inherit"
+                    >Where AI tooling earns its place in our workflow</a
+                  >
+                </h3>
+                <div class="blog-featured-meta" style="margin-top: 8px">
+                  <span>Jun 30, 2026</span><span class="dot"></span
+                  ><span>7 min read</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ BLOG GRID ══════════════════════════════════════════ -->
+    <section class="blog-grid-section">
+      <div class="section-inner">
+        <div class="blog-grid-header reveal">
+          <h2>All Articles</h2>
+          <div style="display: flex; gap: 10px; align-items: center">
+            <span style="font-size: 13px; color: var(--text-faint)"
+              >Sort by:</span
+            >
+            <select
+              style="
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: var(--radius-s);
+                padding: 8px 12px;
+                color: var(--text);
+                font-size: 13.5px;
+              "
+            >
+              <option>Latest</option>
+              <option>Most Popular</option>
+              <option>Oldest</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card reveal" data-cat="engineering">
+            <div class="blog-card-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=70"
+                alt="TypeScript patterns"
+                loading="lazy"
+              />
+            </div>
+            <div class="blog-card-body">
+              <span class="badge badge-amber">Engineering</span>
+              <h3>
+                <a href="#" style="color: inherit"
+                  >TypeScript patterns we use on every project</a
+                >
+              </h3>
+              <p>
+                The five patterns that have saved us the most debugging time
+                across 10+ production codebases.
+              </p>
+              <div class="blog-card-footer">
+                <span>Jun 22, 2026 · 9 min</span>
+                <a href="#" class="read-more">Read <span>→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal reveal-delay-1" data-cat="design">
+            <div class="blog-card-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=600&q=70"
+                alt="Design tokens"
+                loading="lazy"
+              />
+            </div>
+            <div class="blog-card-body">
+              <span class="badge badge-blue">Design</span>
+              <h3>
+                <a href="#" style="color: inherit"
+                  >Design tokens: the single source of truth</a
+                >
+              </h3>
+              <p>
+                How we structure design tokens to keep our design system
+                consistent across web, iOS, and Android.
+              </p>
+              <div class="blog-card-footer">
+                <span>Jun 15, 2026 · 6 min</span>
+                <a href="#" class="read-more">Read <span>→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal reveal-delay-2" data-cat="security">
+            <div class="blog-card-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=70"
+                alt="Zero trust"
+                loading="lazy"
+              />
+            </div>
+            <div class="blog-card-body">
+              <span class="badge badge-purple">Security</span>
+              <h3>
+                <a href="#" style="color: inherit"
+                  >Zero-trust in practice: what it actually means</a
+                >
+              </h3>
+              <p>
+                Moving beyond the buzzword — here's how we implement zero-trust
+                principles in real production systems.
+              </p>
+              <div class="blog-card-footer">
+                <span>Jun 08, 2026 · 11 min</span>
+                <a href="#" class="read-more">Read <span>→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal" data-cat="product">
+            <div class="blog-card-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=70"
+                alt="Product roadmap"
+                loading="lazy"
+              />
+            </div>
+            <div class="blog-card-body">
+              <span class="badge badge-green">Product</span>
+              <h3>
+                <a href="#" style="color: inherit"
+                  >How we run product discovery in 2 weeks</a
+                >
+              </h3>
+              <p>
+                Our condensed discovery sprint that gets founders from vague
+                idea to validated architecture in 10 working days.
+              </p>
+              <div class="blog-card-footer">
+                <span>May 30, 2026 · 8 min</span>
+                <a href="#" class="read-more">Read <span>→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal reveal-delay-1" data-cat="cloud">
+            <div class="blog-card-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=70"
+                alt="Cloud architecture"
+                loading="lazy"
+              />
+            </div>
+            <div class="blog-card-body">
+              <span class="badge badge-blue">Cloud</span>
+              <h3>
+                <a href="#" style="color: inherit"
+                  >Multi-region deployments without the headache</a
+                >
+              </h3>
+              <p>
+                The infrastructure patterns that let us deploy to 4 regions
+                online simultaneously with zero downtime.
+              </p>
+              <div class="blog-card-footer">
+                <span>May 22, 2026 · 10 min</span>
+                <a href="#" class="read-more">Read <span>→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="blog-card reveal reveal-delay-2"
+            data-cat="engineering"
+          >
+            <div class="blog-card-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=70"
+                alt="Testing strategy"
+                loading="lazy"
+              />
+            </div>
+            <div class="blog-card-body">
+              <span class="badge badge-amber">Engineering</span>
+              <h3>
+                <a href="#" style="color: inherit"
+                  >Our testing strategy: what we test and why</a
+                >
+              </h3>
+              <p>
+                We don't aim for 100% coverage. Here's the opinionated testing
+                philosophy that actually ships better software.
+              </p>
+              <div class="blog-card-footer">
+                <span>May 14, 2026 · 7 min</span>
+                <a href="#" class="read-more">Read <span>→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal" data-cat="community">
+            <div class="blog-card-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=70"
+                alt="Community meetup"
+                loading="lazy"
+              />
+            </div>
+            <div class="blog-card-body">
+              <span class="badge badge-gray">Community</span>
+              <h3>
+                <a href="#" style="color: inherit"
+                  >Recap: Austin Tech Founders Meetup Q2</a
+                >
+              </h3>
+              <p>
+                What we learned from 80 founders in one room — the recurring
+                themes, the surprising disagreements, and the best questions.
+              </p>
+              <div class="blog-card-footer">
+                <span>May 06, 2026 · 4 min</span>
+                <a href="#" class="read-more">Read <span>→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal reveal-delay-1" data-cat="design">
+            <div class="blog-card-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=600&q=70"
+                alt="Motion design"
+                loading="lazy"
+              />
+            </div>
+            <div class="blog-card-body">
+              <span class="badge badge-blue">Design</span>
+              <h3>
+                <a href="#" style="color: inherit"
+                  >Motion design that earns its place</a
+                >
+              </h3>
+              <p>
+                Animation should communicate, not decorate. Here's how we decide
+                when motion adds value and when it's just noise.
+              </p>
+              <div class="blog-card-footer">
+                <span>Apr 28, 2026 · 5 min</span>
+                <a href="#" class="read-more">Read <span>→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal reveal-delay-2" data-cat="product">
+            <div class="blog-card-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=70"
+                alt="Analytics dashboard"
+                loading="lazy"
+              />
+            </div>
+            <div class="blog-card-body">
+              <span class="badge badge-green">Product</span>
+              <h3>
+                <a href="#" style="color: inherit"
+                  >The metrics that actually predict retention</a
+                >
+              </h3>
+              <p>
+                DAU/MAU is a lagging indicator. Here are the early signals we
+                track to predict whether users will stick around.
+              </p>
+              <div class="blog-card-footer">
+                <span>Apr 19, 2026 · 9 min</span>
+                <a href="#" class="read-more">Read <span>→</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Load More -->
+        <div class="center-cta reveal">
+          <button
+            class="btn btn-outline"
+            onclick="
+              this.textContent = 'No more posts for now ✓';
+              this.disabled = true;
+            "
+          >
+            Load More Articles
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ COMMUNITY SECTION ══════════════════════════════════ -->
+    <section class="community-section">
+      <div class="section-inner">
+        <div class="community-inner reveal">
+          <div class="community-copy">
+            <p class="eyebrow"><span class="eyebrow-dot"></span>Community</p>
+            <h2>Join the cynoca community</h2>
+            <p>
+              Connect with founders, engineers, and designers who are building
+              the next generation of software. Share ideas, get feedback, and
+              grow together.
+            </p>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap">
+              <a href="#" class="btn btn-primary"
+                >Join Discord <span class="arrow">→</span></a
+              >
+              <a href="#" class="btn btn-ghost">Follow on X</a>
+            </div>
+          </div>
+          <div class="community-stats">
+            <div class="community-stat">
+              <span class="community-stat-num" data-target="2400">2400</span>
+              <span class="community-stat-label">Discord Members</span>
+            </div>
+            <div class="community-stat">
+              <span class="community-stat-num" data-target="890">890</span>
+              <span class="community-stat-label">GitHub Stars</span>
+            </div>
+            <div class="community-stat">
+              <span class="community-stat-num" data-target="48">48</span>
+              <span class="community-stat-label">Articles Published</span>
+            </div>
+            <div class="community-stat">
+              <span class="community-stat-num" data-target="12">12</span>
+              <span class="community-stat-label">Meetups Hosted</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ RECENT DISCUSSIONS ═════════════════════════════════ -->
+    <section class="section-sm">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <p class="eyebrow">
+            <span class="eyebrow-dot"></span>Community Discussions
+          </p>
+          <h2>What the community is talking about</h2>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <!-- Discussion items -->
+          <div
+            class="reveal"
+            style="
+              background: var(--card);
+              border: 1px solid var(--border);
+              border-radius: var(--radius-m);
+              padding: 20px 24px;
+              display: flex;
+              gap: 16px;
+              align-items: flex-start;
+              transition: border-color 0.2s;
+            "
+            onmouseenter="this.style.borderColor = 'rgba(61,99,255,0.4)'"
+            onmouseleave="this.style.borderColor = 'var(--border)'"
+          >
+            <div
+              style="
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #3d63ff, #7c5cff);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                font-size: 14px;
+                color: #fff;
+                flex: none;
+              "
+            >
+              AK
+            </div>
+            <div style="flex: 1">
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin-bottom: 6px;
+                "
+              >
+                <span style="font-size: 14px; font-weight: 600">POWELL.E</span>
+                <span class="badge badge-blue">Software Engineering</span>
+                <span
+                  style="
+                    font-size: 12px;
+                    color: var(--text-faint);
+                    margin-left: auto;
+                  "
+                  >2h ago</span
+                >
+              </div>
+              <p style="font-size: 14.5px; margin: 0 0 10px">
+                Has anyone found a good pattern for handling optimistic updates
+                with React Query when you have complex nested data? We're
+                running into cache invalidation issues.
+              </p>
+              <div
+                style="
+                  display: flex;
+                  gap: 16px;
+                  font-size: 12.5px;
+                  color: var(--text-faint);
+                "
+              >
+                <span>💬 14 replies</span>
+                <span>❤️ 28 likes</span>
+                <a href="#" style="color: var(--primary); font-weight: 500"
+                  >Reply →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="reveal reveal-delay-1"
+            style="
+              background: var(--card);
+              border: 1px solid var(--border);
+              border-radius: var(--radius-m);
+              padding: 20px 24px;
+              display: flex;
+              gap: 16px;
+              align-items: flex-start;
+              transition: border-color 0.2s;
+            "
+            onmouseenter="this.style.borderColor = 'rgba(61,99,255,0.4)'"
+            onmouseleave="this.style.borderColor = 'var(--border)'"
+          >
+            <div
+              style="
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #22c55e, #3d63ff);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                font-size: 14px;
+                color: #fff;
+                flex: none;
+              "
+            >
+              SR
+            </div>
+            <div style="flex: 1">
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin-bottom: 6px;
+                "
+              >
+                <span style="font-size: 14px; font-weight: 600"
+                  >Anthony.O.O</span
+                >
+                <span class="badge badge-purple"> Cyber Security</span>
+                <span
+                  style="
+                    font-size: 12px;
+                    color: var(--text-faint);
+                    margin-left: auto;
+                  "
+                  >5h ago</span
+                >
+              </div>
+              <p style="font-size: 14.5px; margin: 0 0 10px">
+                Just finished implementing PKCE flow for our OAuth setup. Happy
+                to share the implementation if anyone's working on the same
+                thing — it's trickier than the docs suggest.
+              </p>
+              <div
+                style="
+                  display: flex;
+                  gap: 16px;
+                  font-size: 12.5px;
+                  color: var(--text-faint);
+                "
+              >
+                <span>💬 9 replies</span>
+                <span>❤️ 41 likes</span>
+                <a href="#" style="color: var(--primary); font-weight: 500"
+                  >Reply →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="reveal reveal-delay-2"
+            style="
+              background: var(--card);
+              border: 1px solid var(--border);
+              border-radius: var(--radius-m);
+              padding: 20px 24px;
+              display: flex;
+              gap: 16px;
+              align-items: flex-start;
+              transition: border-color 0.2s;
+            "
+            onmouseenter="this.style.borderColor = 'rgba(61,99,255,0.4)'"
+            onmouseleave="this.style.borderColor = 'var(--border)'"
+          >
+            <div
+              style="
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #f59e0b, #7c5cff);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                font-size: 14px;
+                color: #fff;
+                flex: none;
+              "
+            >
+              MK
+            </div>
+            <div style="flex: 1">
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin-bottom: 6px;
+                "
+              >
+                <span style="font-size: 14px; font-weight: 600">kelvin.O</span>
+                <span class="badge badge-green">Product</span>
+                <span
+                  style="
+                    font-size: 12px;
+                    color: var(--text-faint);
+                    margin-left: auto;
+                  "
+                  >1d ago</span
+                >
+              </div>
+              <p style="font-size: 14.5px; margin: 0 0 10px">
+                We just hit 10k MAU on our B2B SaaS. The biggest unlock was
+                switching from feature-based onboarding to outcome-based
+                onboarding. Sharing our full playbook in the #product channel.
+              </p>
+              <div
+                style="
+                  display: flex;
+                  gap: 16px;
+                  font-size: 12.5px;
+                  color: var(--text-faint);
+                "
+              >
+                <span>💬 22 replies</span>
+                <span>❤️ 87 likes</span>
+                <a href="#" style="color: var(--primary); font-weight: 500"
+                  >Reply →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="center-cta reveal">
+          <a href="#" class="btn btn-outline">Join the Discussion →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ NEWSLETTER ═════════════════════════════════════════ -->
+    <section class="newsletter-section">
+      <div class="section-inner">
+        <div class="newsletter-inner reveal">
+          <p class="eyebrow center">
+            <span class="eyebrow-dot"></span>Stay in the loop
+          </p>
+          <h2>Get the weekly build note</h2>
+          <p>
+            One email per week. What we shipped, what we learned, and what we're
+            thinking about. No fluff.
+          </p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="your@email.com" required />
+            <button type="submit" class="btn btn-primary">
+              Subscribe <span class="arrow">→</span>
+            </button>
+          </form>
+          <p
+            style="font-size: 12px; color: var(--text-faint); margin-top: 14px"
+          >
+            No spam. Unsubscribe anytime. 3,200+ subscribers.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ FOOTER ═════════════════════════════════════════════ -->
+    <footer class="footer">
+      <div class="section-inner footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <img src="images/logo.jpeg" alt="CYNOCA logo" class="brand-logo" />
+            <span class="brand-text">CYNOCA</span>
+          </a>
+          <p>
+            A TECH COMPANY — we design, secure and build software that holds its
+            structure at scale.
+          </p>
+          <div class="social-row">
+            <a href="#" aria-label="LinkedIn"
+              ><svg
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                fill="currentColor"
+              >
+                <path
+                  d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.02-3.07-1.9-3.07-1.9 0-2.2 1.44-2.2 2.97V21H9z"
+                /></svg
+            ></a>
+            <a href="#" aria-label="X"
+              ><svg
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                fill="currentColor"
+              >
+                <path
+                  d="M3 3l8 10.2L3.3 21H6l6-6.9L17 21h4l-8.5-10.8L20.4 3h-2.7l-5.5 6.3L8 3z"
+                /></svg
+            ></a>
+            <a href="#" aria-label="GitHub"
+              ><svg
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"
+                /></svg
+            ></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="index.html#work">Work</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="index.html#services">Security</a>
+          <a href="index.html#services">Web Platforms</a>
+          <a href="index.html#services">Mobile Apps</a>
+          <a href="index.html#services">Cloud &amp; Infra</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="blog.html">Blog</a>
+          <a href="about.html">Team</a>
+          <a href="#">Careers</a>
+          <a href="#">Sitemap</a>
+        </div>
+        <div class="footer-col footer-news">
+          <h4>Newsletter</h4>
+          <p>Subscribe for build notes and studio updates.</p>
+          <form class="news-form" id="newsForm">
+            <input
+              type="email"
+              placeholder="Your email address"
+              required
+              aria-label="Email address"
+            />
+            <button type="submit" aria-label="Subscribe">
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom section-inner">
+        <span>© 2026 CYNOCA TECH &amp; CO. All rights reserved.</span>
+        <span class="footer-legal"
+          ><a href="#">Privacy Policy</a
+          ><a href="#">Terms &amp; Conditions</a></span
+        >
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>

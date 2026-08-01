@@ -1,0 +1,523 @@
+/* ==========================================================
+   CYNOCA — animations.css
+   Anime.js-inspired keyframes + CSS animation utilities
+   ========================================================== */
+
+/* ── Keyframes ─────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(-4px) rotate(-1deg);
+  }
+}
+@keyframes orbPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+}
+@keyframes spinY {
+  from {
+    transform: perspective(900px) rotateY(0deg);
+  }
+  to {
+    transform: perspective(900px) rotateY(360deg);
+  }
+}
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinSlowReverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+@keyframes pulseDot {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(61, 99, 255, 0.4);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 8px rgba(61, 99, 255, 0);
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes borderGlow {
+  0%,
+  100% {
+    border-color: rgba(61, 99, 255, 0.2);
+    box-shadow: 0 0 0 0 rgba(61, 99, 255, 0);
+  }
+  50% {
+    border-color: rgba(61, 99, 255, 0.6);
+    box-shadow: 0 0 20px rgba(61, 99, 255, 0.2);
+  }
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes drawLine {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes particleDrift {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.6;
+  }
+  33% {
+    transform: translateY(-20px) translateX(10px) scale(1.1);
+    opacity: 1;
+  }
+  66% {
+    transform: translateY(-10px) translateX(-8px) scale(0.9);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.6;
+  }
+}
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes waveform {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+@keyframes glitch {
+  0% {
+    clip-path: inset(0 0 98% 0);
+    transform: translate(-2px, 0);
+  }
+  20% {
+    clip-path: inset(40% 0 50% 0);
+    transform: translate(2px, 0);
+  }
+  40% {
+    clip-path: inset(80% 0 10% 0);
+    transform: translate(-1px, 0);
+  }
+  60% {
+    clip-path: inset(20% 0 70% 0);
+    transform: translate(1px, 0);
+  }
+  80% {
+    clip-path: inset(60% 0 30% 0);
+    transform: translate(-2px, 0);
+  }
+  100% {
+    clip-path: inset(0 0 98% 0);
+    transform: translate(0, 0);
+  }
+}
+
+/* ── Animation Utility Classes ─────────────────────────── */
+.anim-fade-in-up {
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.anim-fade-in-down {
+  animation: fadeInDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.anim-fade-in {
+  animation: fadeIn 0.6s ease both;
+}
+.anim-scale-in {
+  animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.anim-slide-left {
+  animation: slideInLeft 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.anim-slide-right {
+  animation: slideInRight 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.anim-float {
+  animation: float 3.5s ease-in-out infinite;
+}
+.anim-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+.anim-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+.anim-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+.anim-spin-reverse {
+  animation: spinSlowReverse 15s linear infinite;
+}
+
+/* Delay helpers */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.delay-300 {
+  animation-delay: 0.3s;
+}
+.delay-400 {
+  animation-delay: 0.4s;
+}
+.delay-500 {
+  animation-delay: 0.5s;
+}
+.delay-600 {
+  animation-delay: 0.6s;
+}
+.delay-700 {
+  animation-delay: 0.7s;
+}
+.delay-800 {
+  animation-delay: 0.8s;
+}
+
+/* ── Shimmer Skeleton ──────────────────────────────────── */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--surface) 25%,
+    rgba(255, 255, 255, 0.06) 50%,
+    var(--surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+/* ── Gradient Text Animated ────────────────────────────── */
+.text-gradient-anim {
+  background: linear-gradient(270deg, #3d63ff, #7c5cff, #c7cbd6, #3d63ff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 6s ease infinite;
+}
+
+/* ── Glowing Border ────────────────────────────────────── */
+.border-glow-anim {
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+/* ── Particle Dots ─────────────────────────────────────── */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.particle-1 {
+  width: 4px;
+  height: 4px;
+  background: var(--primary);
+  animation: particleDrift 4s ease-in-out infinite;
+}
+.particle-2 {
+  width: 3px;
+  height: 3px;
+  background: var(--accent);
+  animation: particleDrift 5s ease-in-out infinite 0.5s;
+}
+.particle-3 {
+  width: 5px;
+  height: 5px;
+  background: var(--cyan);
+  animation: particleDrift 6s ease-in-out infinite 1s;
+}
+
+/* ── Waveform Bars ─────────────────────────────────────── */
+.waveform {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 24px;
+}
+.waveform-bar {
+  width: 3px;
+  border-radius: 2px;
+  background: var(--primary);
+  transform-origin: bottom;
+}
+.waveform-bar:nth-child(1) {
+  animation: waveform 0.8s ease-in-out infinite;
+}
+.waveform-bar:nth-child(2) {
+  animation: waveform 0.8s ease-in-out infinite 0.1s;
+}
+.waveform-bar:nth-child(3) {
+  animation: waveform 0.8s ease-in-out infinite 0.2s;
+}
+.waveform-bar:nth-child(4) {
+  animation: waveform 0.8s ease-in-out infinite 0.3s;
+}
+.waveform-bar:nth-child(5) {
+  animation: waveform 0.8s ease-in-out infinite 0.15s;
+}
+
+/* ── Cursor Dot ────────────────────────────────────────── */
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--primary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.1s ease,
+    width 0.2s ease,
+    height 0.2s ease,
+    opacity 0.2s ease;
+  mix-blend-mode: screen;
+}
+.cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(61, 99, 255, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.15s ease,
+    width 0.25s ease,
+    height 0.25s ease,
+    opacity 0.2s ease;
+}
+
+/* ── Page Transition Overlay ───────────────────────────── */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 9000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.page-transition.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ── Noise Texture Overlay ─────────────────────────────── */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ── Scroll Progress Bar ───────────────────────────────── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: var(--grad-brand);
+  z-index: 300;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* ── Hover Lift ────────────────────────────────────────── */
+.hover-lift {
+  transition:
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Glow on Hover ─────────────────────────────────────── */
+.hover-glow {
+  transition:
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+.hover-glow:hover {
+  box-shadow: var(--shadow-glow);
+  border-color: rgba(61, 99, 255, 0.4);
+}
+
+/* ── Stagger Children ──────────────────────────────────── */
+.stagger-children > *:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.stagger-children > *:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.stagger-children > *:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.stagger-children > *:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.stagger-children > *:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.stagger-children > *:nth-child(6) {
+  animation-delay: 0.3s;
+}

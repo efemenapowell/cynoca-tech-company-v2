@@ -1,0 +1,1299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CYNOCA — Digital Studio</title>
+    <meta
+      name="description"
+      content="CYNOCA is a digital studio — we design and build software that holds its structure at scale."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+  </head>
+  <body>
+    <!-- Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
+
+    <!-- Noise Overlay -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <!-- Page Transition -->
+    <div class="page-transition"></div>
+
+    <!-- ══ NAV ══════════════════════════════════════════════ -->
+    <header class="nav" id="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="brand">
+          <img src="images/logo.jpeg" alt="CYNOCA logo" class="brand-logo" />
+          <span class="brand-text">CYNOCA</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+          <a href="index.html" class="active">
+            <svg
+              class="nav-ic"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="M3 11l9-7 9 7" />
+              <path d="M5 10v10h14V10" />
+            </svg>
+            Home
+          </a>
+          <a href="#services">
+            <svg
+              class="nav-ic"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-4z" />
+            </svg>
+            Services
+          </a>
+          <a href="#work">
+            <svg
+              class="nav-ic"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="M4 4h16v12H4z" />
+              <path d="M8 20h8M12 16v4" />
+            </svg>
+            Work
+          </a>
+          <a href="blog.html">
+            <svg
+              class="nav-ic"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path
+                d="M4 19.5V6a2 2 0 012-2h11l3 3v12.5a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 014 19.5z"
+              />
+              <path d="M8 9h8M8 13h8M8 17h5" />
+            </svg>
+            Blog
+          </a>
+          <a href="about.html">
+            <svg
+              class="nav-ic"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <circle cx="12" cy="8" r="3.2" />
+              <path d="M4.5 20c1.6-4 4.6-6 7.5-6s5.9 2 7.5 6" />
+            </svg>
+            About
+          </a>
+          <a href="#contact">
+            <svg
+              class="nav-ic"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="M4 4h16v16H4z" />
+              <path d="M4 6l8 7 8-7" />
+            </svg>
+            Contact
+          </a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-primary btn-sm">Start a Project</a>
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ══ HERO ═════════════════════════════════════════════ -->
+    <section class="hero" id="home">
+      <div class="hero-intro">
+        <p class="intro-corner-tag">TECHNOLOGY&nbsp;/&nbsp;2026</p>
+
+        <div class="intro-stage">
+          <div class="intro-orb" aria-hidden="true"></div>
+          <canvas
+            id="particle-canvas"
+            class="intro-canvas"
+            aria-hidden="true"
+          ></canvas>
+          <div
+            id="hero-canvas"
+            class="intro-canvas"
+            aria-hidden="true"
+            style="
+              position: absolute;
+              right: -4%;
+              top: -14%;
+              width: 54%;
+              height: 140%;
+              z-index: 1;
+              cursor: grab;
+            "
+          ></div>
+
+          <h1 class="intro-word">CYNOCA</h1>
+
+          <div class="intro-scatter" aria-hidden="true">
+            <span class="sc sc-1">Products</span>
+            <span class="sc sc-2">Websites DEVELOPMENT</span>
+            <span class="sc sc-3">Design Systems</span>
+            <span class="sc sc-4">Interfaces</span>
+            <span class="sc sc-5">CYBER SECURITY</span>
+            <span class="sc sc-6">UI&UX DESIGNS</span>
+            <span class="sc sc-7">Stunning Portfolios</span>
+            <span class="sc sc-8">Secure by Default</span>
+          </div>
+        </div>
+
+        <div class="intro-foot reveal">
+          <p class="hero-hint">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+            >
+              <path d="M9 5l7 7-7 7" />
+            </svg>
+            Drag the model — it's real, not a picture
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary"
+              >Start a Project <span class="arrow">→</span></a
+            >
+            <a href="#work" class="btn btn-ghost">View Our Work</a>
+          </div>
+        </div>
+
+        <div class="scroll-cue" aria-hidden="true">
+          <span class="scroll-line"></span>Scroll
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-bar reveal">
+        <div class="stat">
+          <span class="stat-num" data-target="12">12</span
+          ><span class="stat-label">Projects Shipped</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="4">4</span
+          ><span class="stat-label">Studios &amp; Founders</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="10">10</span
+          ><span class="stat-label">Core Engineers</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="3">3</span
+          ><span class="stat-label">Years in Practice</span>
+        </div>
+      </div>
+
+      <!-- Marquee -->
+      <div class="marquee-wrap reveal">
+        <p class="marquee-label">
+          Trusted by teams building the next generations of technology
+        </p>
+        <div class="marquee">
+          <div class="marquee-track">
+            <span>Cynoca</span><span>Vscode&nbsp;Works</span><span>Halcyon</span
+            ><span>BIU-TECH&nbsp;Labs</span><span>Quiet&nbsp;Systems</span
+            ><span>Pentagram&nbsp;Data</span><span>Nosto&nbsp;Works</span
+            ><span>Recombee&nbsp;Co</span> <span>Alogoria</span
+            ><span>Spline&nbsp;3d works</span><span>Halcyon</span
+            ><span>Origami&nbsp;Labs</span><span>Quiet&nbsp;Systems</span
+            ><span>Pentagram&nbsp;Data</span><span>Anime.js&nbsp;Works</span
+            ><span>react.bits&nbsp;Co</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ FEATURES ══════════════════════════════════════════ -->
+    <section class="features section" id="features">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <p class="eyebrow center">
+            <span class="eyebrow-dot"></span>Why cynoca
+          </p>
+          <h2 class="center">Built for the long run</h2>
+          <p class="section-sub center">
+            Every decision we make is optimized for the product you'll have in
+            year five, not just launch day.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card tilt-card reveal">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path
+                  d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-4z"
+                />
+              </svg>
+            </div>
+            <h3>Security by Default</h3>
+            <p>
+              OUR CYBER SECURITY AND INTERFACE MANGER WORK TIRELESSLY TO ENSURE
+              YOUR PRODUCTS ARE SAFEGUARD.
+            </p>
+            <a href="#services" class="s-link"
+              >Learn more <span class="arrow">→</span></a
+            >
+          </article>
+
+          <article class="feature-card tilt-card reveal reveal-delay-1">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+            </div>
+            <h3>Performance First</h3>
+            <p>
+              Amazing 3D interactions website, optimized back-end, and
+              edge-ready deployments that scales without drama.
+            </p>
+            <a href="#services" class="s-link"
+              >Learn more <span class="arrow">→</span></a
+            >
+          </article>
+
+          <article class="feature-card tilt-card reveal reveal-delay-2">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <circle cx="12" cy="6" r="3" />
+                <circle cx="5" cy="18" r="3" />
+                <circle cx="19" cy="18" r="3" />
+                <path d="M12 9v4M9 15l-2 1M15 15l2 1" />
+              </svg>
+            </div>
+            <h3>Systems Thinking</h3>
+            <p>
+              We design the architecture before the interface — structure first,
+              screens second, always.
+            </p>
+            <a href="#services" class="s-link"
+              >Learn more <span class="arrow">→</span></a
+            >
+          </article>
+
+          <article class="feature-card tilt-card reveal">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <rect x="7" y="2" width="10" height="20" rx="2" />
+                <path d="M11 18h2" />
+              </svg>
+            </div>
+            <h3>Cross-Platform</h3>
+            <p>
+              One shared design and logic core powering native-feeling iOS,
+              Android, and web products simultaneously.
+            </p>
+            <a href="#services" class="s-link"
+              >Learn more <span class="arrow">→</span></a
+            >
+          </article>
+
+          <article class="feature-card tilt-card reveal reveal-delay-1">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path
+                  d="M6 18a4 4 0 010-8 5 5 0 019.6-1.8A4.5 4.5 0 0119 18H6z"
+                />
+              </svg>
+            </div>
+            <h3>Cloud Native</h3>
+            <p>
+              Scalable, observable cloud architecture that survives a traffic
+              spike or an on-call handoff.
+            </p>
+            <a href="#services" class="s-link"
+              >Learn more <span class="arrow">→</span></a
+            >
+          </article>
+
+          <article class="feature-card tilt-card reveal reveal-delay-2">
+            <div class="feature-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path d="M4 20l4-10 4 6 3-4 5 8H4z" />
+              </svg>
+            </div>
+            <h3>Data-Driven UX</h3>
+            <p>
+              Interfaces shaped by real usage data, with motion and depth used
+              only where it earns its place.
+            </p>
+            <a href="#services" class="s-link"
+              >Learn more <span class="arrow">→</span></a
+            >
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ ABOUT ═════════════════════════════════════════════ -->
+    <section class="about" id="about">
+      <div class="section-inner about-grid">
+        <div class="about-visual reveal">
+          <div class="facet-frame">
+            <div class="facet-shape">
+              <svg viewBox="0 0 320 320" width="100%" height="100%">
+                <polygon
+                  points="160,20 290,95 290,225 160,300 30,225 30,95"
+                  fill="none"
+                  stroke="#2a3560"
+                  stroke-width="1"
+                />
+                <polygon
+                  points="160,60 250,110 250,210 160,260 70,210 70,110"
+                  fill="none"
+                  stroke="#3d63ff"
+                  stroke-width="1.4"
+                />
+                <polygon
+                  points="160,100 210,128 210,192 160,220 110,192 110,128"
+                  fill="rgba(91,110,255,0.16)"
+                  stroke="#9aa6ff"
+                  stroke-width="1.4"
+                />
+                <circle
+                  cx="160"
+                  cy="160"
+                  r="14"
+                  fill="#c7cbd6"
+                  opacity="0.85"
+                />
+                <line
+                  x1="160"
+                  y1="20"
+                  x2="160"
+                  y2="300"
+                  stroke="#1c2140"
+                  stroke-width="1"
+                />
+                <line
+                  x1="30"
+                  y1="95"
+                  x2="290"
+                  y2="225"
+                  stroke="#1c2140"
+                  stroke-width="1"
+                />
+                <line
+                  x1="290"
+                  y1="95"
+                  x2="30"
+                  y2="225"
+                  stroke="#1c2140"
+                  stroke-width="1"
+                />
+              </svg>
+            </div>
+            <span class="facet-tag facet-tag-1">V1</span>
+            <span class="facet-tag facet-tag-2">V2</span>
+            <span class="facet-tag facet-tag-3">Core</span>
+          </div>
+        </div>
+
+        <div class="about-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-dot"></span>How We Work</p>
+          <h2>
+            Every project starts as a single point, then gains new heights.
+          </h2>
+          <p class="about-lede">
+            CYNOCA Tech began as a four-person operation solving interface
+            problems for hardware startups. We kept the same method and we are
+            stil growing, we define the point, connect the edges, resolve the
+            surface. Nothing ships until the structure holds.
+          </p>
+
+          <ul class="check-list">
+            <li>
+              <svg
+                class="check-ic"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M20 6L9 17l-5-5" /></svg
+              >Systems-first, not screens-first design
+            </li>
+            <li>
+              <svg
+                class="check-ic"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M20 6L9 17l-5-5" /></svg
+              >Engineers and designers pair on every build
+            </li>
+            <li>
+              <svg
+                class="check-ic"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M20 6L9 17l-5-5" /></svg
+              >Security and performance are default, not add-ons
+            </li>
+            <li>
+              <svg
+                class="check-ic"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M20 6L9 17l-5-5" /></svg
+              >Built to scale past the first version and more
+            </li>
+          </ul>
+
+          <div class="pillar-row">
+            <div class="pillar">
+              <span class="pillar-num">01</span>
+              <h3>Mission</h3>
+              <p>
+                Give ambitious teams software structure that outlasts the trend
+                it launched with.
+              </p>
+            </div>
+            <div class="pillar">
+              <span class="pillar-num">02</span>
+              <h3>Vision</h3>
+              <p>
+                A company other start up or organziation call when the problem
+                is genuinely hard.
+              </p>
+            </div>
+            <div class="pillar">
+              <span class="pillar-num">03</span>
+              <h3>Values</h3>
+              <p>Precision, candor, and craft — in that order, every time.</p>
+            </div>
+            <div class="pillar">
+              <span class="pillar-num">04</span>
+              <h3>Goal</h3>
+              <p>
+                Long partnerships, not one-off launches, with every client we
+                take on.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ 3D SHOWCASE ════════════════════════════════════════ -->
+    <section class="spline-showcase" id="explore-3d">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <p class="eyebrow center">
+            <span class="eyebrow-dot"></span>Interactive
+          </p>
+          <h2 class="center">Reach out and turn it</h2>
+          <p class="section-sub center">
+            A live 3D scene, not a screenshot — drag to rotate and see how our
+            design system holds up in three dimensions.
+          </p>
+        </div>
+        <div class="hero-3d-frame reveal">
+          <div class="hero-3d-overlay" aria-hidden="true">
+            <span class="hero-3d-brand">CYNOCA</span>
+            <span class="hero-3d-caption">Interactive 3D</span>
+          </div>
+          <iframe
+            src="https://my.spline.design/holdinghandspowerfulcopy-3fa8c3150355de2edfbc32e1303e5d9c/"
+            loading="lazy"
+            allow="fullscreen"
+            title="Interactive 3D scene"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ SERVICES ══════════════════════════════════════════ -->
+    <section class="services" id="services">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <p class="eyebrow center">
+            <span class="eyebrow-dot"></span>What We Build
+          </p>
+          <h2 class="center">Six disciplines, one connected surface</h2>
+          <p class="section-sub center">
+            Each service is a face of the same structure — pull one thread and
+            the rest of the build responds with it.
+          </p>
+        </div>
+
+        <div class="card-grid tilt-grid">
+          <article class="s-card tilt-card reveal">
+            <div class="s-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path
+                  d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-4z"
+                />
+              </svg>
+            </div>
+            <h3>Security Engineering</h3>
+            <p>
+              Threat modeling, hardened infrastructure, and audits built into
+              the pipeline — not bolted on after launch.
+            </p>
+            <a href="#contact" class="s-link"
+              >Learn more <span class="arrow">→</span></a
+            >
+          </article>
+          <article class="s-card tilt-card reveal reveal-delay-1">
+            <div class="s-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path d="M4 4h16v12H4z" />
+                <path d="M8 20h8M12 16v4" />
+              </svg>
+            </div>
+            <h3>Web Platforms</h3>
+            <p>
+              Fast, resilient front ends and APIs, architected for the traffic
+              you'll have in year two, not just launch day.
+            </p>
+            <a href="#contact" class="s-link"
+              >Learn more <span class="arrow">→</span></a
+            >
+          </article>
+          <article class="s-card tilt-card reveal reveal-delay-2">
+            <div class="s-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <rect x="7" y="2" width="10" height="20" rx="2" />
+                <path d="M11 18h2" />
+              </svg>
+            </div>
+            <h3>Mobile Apps</h3>
+            <p>
+              Native-feeling iOS and Android products, built from one shared
+              design and logic core.
+            </p>
+            <a href="#contact" class="s-link"
+              >Learn more <span class="arrow">→</span></a
+            >
+          </article>
+          <article class="s-card tilt-card reveal">
+            <div class="s-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path
+                  d="M6 18a4 4 0 010-8 5 5 0 019.6-1.8A4.5 4.5 0 0119 18H6z"
+                />
+              </svg>
+            </div>
+            <h3>Cloud &amp; Infra</h3>
+            <p>
+              Scalable, observable cloud architecture that survives a traffic
+              spike or an on-call handoff.
+            </p>
+            <a href="#contact" class="s-link"
+              >Learn more <span class="arrow">→</span></a
+            >
+          </article>
+          <article class="s-card tilt-card reveal reveal-delay-1">
+            <div class="s-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <circle cx="12" cy="6" r="3" />
+                <circle cx="5" cy="18" r="3" />
+                <circle cx="19" cy="18" r="3" />
+                <path d="M12 9v4M9 15l-2 1M15 15l2 1" />
+              </svg>
+            </div>
+            <h3>Technical Strategy</h3>
+            <p>
+              Fractional CTO-level guidance to help founders pick the right
+              architecture the first time.
+            </p>
+            <a href="#contact" class="s-link"
+              >Learn more <span class="arrow">→</span></a
+            >
+          </article>
+          <article class="s-card tilt-card reveal reveal-delay-2">
+            <div class="s-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path d="M4 20l4-10 4 6 3-4 5 8H4z" />
+              </svg>
+            </div>
+            <h3>Product &amp; UI/UX</h3>
+            <p>
+              Interfaces shaped by real usage data, with motion and depth used
+              only where it earns its place.
+            </p>
+            <a href="#contact" class="s-link"
+              >Learn more <span class="arrow">→</span></a
+            >
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ WORK ══════════════════════════════════════════════ -->
+    <section class="work" id="work">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <p class="eyebrow center">
+            <span class="eyebrow-dot"></span>Selected Work
+          </p>
+          <h2 class="center">Recent builds</h2>
+        </div>
+
+        <div class="filter-row reveal" id="filterRow">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web Platforms</button>
+          <button class="filter-btn" data-filter="mobile">Mobile</button>
+          <button class="filter-btn" data-filter="security">Security</button>
+          <button class="filter-btn" data-filter="design">UI/UX</button>
+        </div>
+
+        <div class="work-grid" id="workGrid">
+          <article class="w-card reveal" data-cat="web">
+            <div class="w-thumb w-thumb-1">
+              <img
+                src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=70"
+                alt="LedgerFlow finance dashboard"
+                loading="lazy"
+              />
+              <span class="w-thumb-tag">Web Platform</span>
+            </div>
+            <div class="w-body">
+              <h3>LedgerFlow</h3>
+              <p>Real-time finance dashboard for a payments platform.</p>
+            </div>
+          </article>
+          <article class="w-card reveal reveal-delay-1" data-cat="security">
+            <div class="w-thumb w-thumb-2">
+              <img
+                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=70"
+                alt="SecureShield access console"
+                loading="lazy"
+              />
+              <span class="w-thumb-tag">Cybersecurity</span>
+            </div>
+            <div class="w-body">
+              <h3>SecureShield</h3>
+              <p>Zero-trust access console for distributed teams.</p>
+            </div>
+          </article>
+          <article class="w-card reveal reveal-delay-2" data-cat="mobile">
+            <div class="w-thumb w-thumb-3">
+              <img
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=70"
+                alt="HealthCare+ mobile app"
+                loading="lazy"
+              />
+              <span class="w-thumb-tag">Mobile App</span>
+            </div>
+            <div class="w-body">
+              <h3>HealthCare+</h3>
+              <p>Patient scheduling app for a multi-clinic network.</p>
+            </div>
+          </article>
+          <article class="w-card reveal" data-cat="design">
+            <div class="w-thumb w-thumb-4">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=70"
+                alt="EduSmart course builder"
+                loading="lazy"
+              />
+              <span class="w-thumb-tag">UI/UX</span>
+            </div>
+            <div class="w-body">
+              <h3>EduSmart</h3>
+              <p>Course builder redesigned for first-time instructors.</p>
+            </div>
+          </article>
+          <article class="w-card reveal reveal-delay-1" data-cat="web">
+            <div class="w-thumb w-thumb-5">
+              <img
+                src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=70"
+                alt="CloudSync backup console"
+                loading="lazy"
+              />
+              <span class="w-thumb-tag">Cloud Platform</span>
+            </div>
+            <div class="w-body">
+              <h3>CloudSync</h3>
+              <p>Cross-region backup orchestration console.</p>
+            </div>
+          </article>
+          <article class="w-card reveal reveal-delay-2" data-cat="web">
+            <div class="w-thumb w-thumb-6">
+              <img
+                src="https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?auto=format&fit=crop&w=800&q=70"
+                alt="ShopEase storefront"
+                loading="lazy"
+              />
+              <span class="w-thumb-tag">E-commerce</span>
+            </div>
+            <div class="w-body">
+              <h3>ShopEase</h3>
+              <p>Headless storefront with sub-second checkout.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="center-cta reveal">
+          <a href="blog.html" class="btn btn-outline">View All Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ TESTIMONIALS ═══════════════════════════════════════ -->
+    <section class="testimonials section" id="testimonials">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <p class="eyebrow center">
+            <span class="eyebrow-dot"></span>Client Stories
+          </p>
+          <h2 class="center">What our clients say</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "Cynoca didn't just build our platform — they redesigned how we
+              think about our product. The architecture they proposed in week
+              one is still holding up one years later."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RE</div>
+              <div>
+                <div class="author-name">richard emesmond</div>
+                <div class="author-role">Golden treasure ltd</div>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card reveal reveal-delay-1">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "The security audit they ran before launch caught three critical
+              issues our internal team had missed. Worth every dollar and then
+              some."
+            </p>
+            <div class="testimonial-author">
+              <div
+                class="author-avatar"
+                style="background: linear-gradient(135deg, #7c5cff, #3d63ff)"
+              >
+                SR
+              </div>
+              <div>
+                <div class="author-name">Sofia Reyes</div>
+                <div class="author-role">Founder, Quiet Systems</div>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card reveal reveal-delay-2">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "We came to cynoca with a vague idea and left with a product
+              roadmap, a design system, and a team that felt like our own.
+              Exceptional work."
+            </p>
+            <div class="testimonial-author">
+              <div
+                class="author-avatar"
+                style="background: linear-gradient(135deg, #22c55e, #3d63ff)"
+              >
+                J.J
+              </div>
+              <div>
+                <div class="author-name">jacob jims</div>
+                <div class="author-role">CEO, biu-tech Labs</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ INSIGHTS ═══════════════════════════════════════════ -->
+    <section class="insights" id="insights">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <p class="eyebrow center">
+            <span class="eyebrow-dot"></span>From the Studio
+          </p>
+          <h2 class="center">Cynoca Explored Works</h2>
+        </div>
+
+        <div class="insights-grid">
+          <article class="feature-post reveal">
+            <a class="feature-thumb" href="blog.html">
+              <img
+                src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1000&q=70"
+                alt="Product strategy article cover"
+                loading="lazy"
+              />
+            </a>
+            <span class="post-tag">Product Strategy</span>
+            <h3>
+              <a href="blog.html"
+                >Designing interfaces that hold up past the demo</a
+              >
+            </h3>
+            <p>
+              Why the second week of using a product matters more than the first
+              five minutes — and what that means for how we design.
+            </p>
+            <span class="post-date">Jul 7, 2024 · CYNOCA Team</span>
+          </article>
+
+          <div class="post-list">
+            <article class="post-row reveal">
+              <div class="post-row-thumb pt-1">
+                <img
+                  src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=200&q=70"
+                  alt="Security checklist"
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <span class="post-tag small">Security</span>
+                <h4>Five checks every launch needs before go-live</h4>
+                <span class="post-date">Jul 18, 2028</span>
+              </div>
+            </article>
+            <article class="post-row reveal reveal-delay-1">
+              <div class="post-row-thumb pt-2">
+                <img
+                  src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=200&q=70"
+                  alt="Cloud scaling"
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <span class="post-tag small">Cloud</span>
+                <h4>What "scalable" actually costs at series A</h4>
+                <span class="post-date">Jul 09, 2026</span>
+              </div>
+            </article>
+            <article class="post-row reveal reveal-delay-2">
+              <div class="post-row-thumb pt-3">
+                <img
+                  src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=200&q=70"
+                  alt="AI tooling"
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <span class="post-tag small">Engineering</span>
+                <h4>Where AI tooling earns its place in our workflow</h4>
+                <span class="post-date">Jun 30, 2026</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="center-cta reveal">
+          <a href="blog.html" class="btn btn-outline">Read All Articles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CTA ════════════════════════════════════════════════ -->
+    <section class="cta-section">
+      <div class="section-inner">
+        <div class="cta-inner reveal">
+          <p class="eyebrow center">
+            <span class="eyebrow-dot"></span>Ready to build?
+          </p>
+          <h2>Let's give your idea structure</h2>
+          <p>
+            Tell us what you're building. We reply within one business day with
+            next steps, not a sales script.
+          </p>
+          <div class="cta-actions">
+            <a href="#contact" class="btn btn-primary"
+              >Start a Project <span class="arrow">→</span></a
+            >
+            <a href="about.html" class="btn btn-ghost">Meet the Team</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CONTACT ════════════════════════════════════════════ -->
+    <section class="contact" id="contact">
+      <div class="section-inner contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-dot"></span>Get In Touch</p>
+          <h2>Let's give your idea structure</h2>
+          <p class="about-lede">
+            Tell us what you're building. We reply within one business day with
+            next steps, not a sales script.
+          </p>
+
+          <div class="contact-info">
+            <div class="info-row">
+              <span class="info-ic"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <path d="M12 21s7-6.3 7-11a7 7 0 10-14 0c0 4.7 7 11 7 11z" />
+                  <circle cx="12" cy="10" r="2.4" /></svg
+              ></span>
+              <div><strong>COMPANY</strong><span>ONLINE FOR NOW</span></div>
+            </div>
+            <div class="info-row">
+              <span class="info-ic"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <path d="M4 4h16v16H4z" />
+                  <path d="M4 6l8 7 8-7" /></svg
+              ></span>
+              <div><strong>Email</strong><span>CYNOCATECH@GMAIL.COM</span></div>
+            </div>
+            <div class="info-row">
+              <span class="info-ic"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <rect x="5" y="2" width="14" height="20" rx="2" />
+                  <path d="M11 18h2" /></svg
+              ></span>
+              <div>
+                <strong>Phone</strong
+                ><span>+234 8134026808 OR +234 8139288288</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <span class="info-ic"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 2" /></svg
+              ></span>
+              <div>
+                <strong>Hours</strong
+                ><span>Mon – SAT, 9:00 AM – 6:00 PM WAT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-row">
+            <a href="#" aria-label="LinkedIn"
+              ><svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="currentColor"
+              >
+                <path
+                  d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.02-3.07-1.9-3.07-1.9 0-2.2 1.44-2.2 2.97V21H9z"
+                /></svg
+            ></a>
+            <a href="#" aria-label="X / Twitter"
+              ><svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="currentColor"
+              >
+                <path
+                  d="M3 3l8 10.2L3.3 21H6l6-6.9L17 21h4l-8.5-10.8L20.4 3h-2.7l-5.5 6.3L8 3z"
+                /></svg
+            ></a>
+            <a href="#" aria-label="GitHub"
+              ><svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"
+                /></svg
+            ></a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Your name</label
+              ><input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Jordan Blake"
+              />
+            </div>
+            <div class="field">
+              <label for="email">Your email</label
+              ><input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="jordan@company.com"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label for="subject">Subject</label
+            ><input
+              type="text"
+              id="subject"
+              name="subject"
+              required
+              placeholder="New product build"
+            />
+          </div>
+          <div class="field">
+            <label for="message">Message</label
+            ><textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder="Tell us about your project..."
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Send Message <span class="arrow">→</span>
+          </button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+
+      <div class="fake-map reveal" aria-hidden="true">
+        <div class="fake-map-grid"></div>
+        <div class="fake-map-pin">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="#c7cbd6">
+            <path
+              d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ FOOTER ═════════════════════════════════════════════ -->
+    <footer class="footer">
+      <div class="section-inner footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <img src="images/logo.jpeg" alt="CYNOCA logo" class="brand-logo" />
+            <span class="brand-text">CYNOCA</span>
+          </a>
+          <p>
+            A technology-focused studio — we design and build software that
+            holds its structure at scale and stays reliable over time.
+          </p>
+          <div class="social-row">
+            <a href="#" aria-label="LinkedIn"
+              ><svg
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                fill="currentColor"
+              >
+                <path
+                  d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.02-3.07-1.9-3.07-1.9 0-2.2 1.44-2.2 2.97V21H9z"
+                /></svg
+            ></a>
+            <a href="#" aria-label="X"
+              ><svg
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                fill="currentColor"
+              >
+                <path
+                  d="M3 3l8 10.2L3.3 21H6l6-6.9L17 21h4l-8.5-10.8L20.4 3h-2.7l-5.5 6.3L8 3z"
+                /></svg
+            ></a>
+            <a href="#" aria-label="GitHub"
+              ><svg
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"
+                /></svg
+            ></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="#work">Work</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#services">Security</a>
+          <a href="#services">Web Platforms</a>
+          <a href="#services">Mobile Apps</a>
+          <a href="#services">Cloud &amp; Infra</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="blog.html">Blog</a>
+          <a href="about.html">Team</a>
+          <a href="#">Careers</a>
+          <a href="#">Sitemap</a>
+        </div>
+        <div class="footer-col footer-news">
+          <h4>Newsletter</h4>
+          <p>Subscribe for build notes and company updates.</p>
+          <form class="news-form" id="newsForm">
+            <input
+              type="email"
+              placeholder="Your email address"
+              required
+              aria-label="Email address"
+            />
+            <button type="submit" aria-label="Subscribe">
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom section-inner">
+        <span>© 2026 CYNOCA TECH &amp; CO. All rights reserved.</span>
+        <span class="footer-legal"
+          ><a href="#">Privacy Policy</a
+          ><a href="#">Terms &amp; Conditions</a></span
+        >
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>
